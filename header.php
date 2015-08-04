@@ -20,6 +20,15 @@
 <?php wp_head(); ?>
 </head>
 
+<div id="navmenu">
+<ul>
+ <li><a href="<?php echo get_settings('home'); ?>">HOME</a></li>
+<?php wp_list_categories('orderby=name&include=1,3,4,5'); ?>
+ <li><a href="http://www.wordpress.org">WORDPRESS</a></li>
+</ul>
+</div>
+
+
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'royal-kings' ); ?></a>
