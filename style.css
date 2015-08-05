@@ -888,3 +888,14 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+#footer {
+	max-width: 100%;
+	background: url(footer sheesh.jpg);
+}
+
+#footer-wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+}
