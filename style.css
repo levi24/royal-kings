@@ -272,7 +272,7 @@ textarea {
 	color: #404040;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 0.5;
 }
 
 h1,
@@ -284,9 +284,6 @@ h6 {
 	clear: both;
 }
 
-p {
-	margin-bottom: 1.5em;
-}
 
 dfn,
 cite,
@@ -900,4 +897,8 @@ footer{
 }
 #site-navigation li{
 	padding: 25px;
+}
+.site-branding{
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 55px;
 }
