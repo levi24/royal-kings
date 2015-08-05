@@ -890,12 +890,11 @@ object {
 }
 
 
-footer {
-	max-width: 100%;
-	background: url(footer sheesh.jpg);
-}
-
-#colophon {
+footer{
+	max-width:100%;
 	margin: 0 auto;
-	max-width: 960px;
+	float:right;
+}
+.comments-area{
+	display: none;
 }
