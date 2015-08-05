@@ -891,6 +891,18 @@ footer{
 #site-navigation li{
 	padding: 25px;
 }
+#site-navigation li a{
+	color:white;
+}
+#site-navigation li a:hover{
+	color:#c42801;
+}
+#site-navigation li a:visited{
+	color:white;
+}
+#site-navigation li a:active{
+	color:#c42801;
+}
 #site-navigation{
 	width:30%;
 }
