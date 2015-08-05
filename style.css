@@ -895,3 +895,13 @@ footer{
 	font-family: 'Berkshire Swash', cursive;
 	font-size: 55px;
 }
+p{
+	color:white;
+}
+.entry-header h1{
+	font-family: 'Berkshire Swash', cursive;
+	color: #c42801;
+}
+.entry-content p{
+	line-height: 1.5em;
+}
