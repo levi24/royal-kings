@@ -891,9 +891,13 @@ footer{
 #site-navigation li{
 	padding: 25px;
 }
+#site-navigation{
+	width:30%;
+}
 .site-branding{
 	font-family: 'Berkshire Swash', cursive;
 	font-size: 55px;
+	width: 60%;
 }
 p{
 	color:white;
