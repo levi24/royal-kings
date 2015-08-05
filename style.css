@@ -68,6 +68,7 @@ nav,
 section,
 summary {
 	display: block;
+	width:100%;
 }
 
 audio,
@@ -284,7 +285,6 @@ h6 {
 	clear: both;
 }
 
-
 blockquote {
 	margin: 0 1.5em;
 }
@@ -344,11 +344,18 @@ html {
 }
 
 body {
-
-background-image:url(“https://phoenix.sheridanc.on.ca/public_html/wp-content/themes/royal-kings/shisha.jpg”);
 	margin: 0;
 background: black;
 	 /* Fallback for when there is no custom background color defined. */
+}
+#masthead{
+	background-image:url("http://phoenix.sheridanc.on.ca/~ccit2705/wp-content/themes/royal-kings/sheesha.jpg");
+	height: 400px;
+	background-repeat:no-repeat;
+	background-position:right;
+}
+#masthead img{
+	
 }
 
 blockquote:before,
@@ -515,7 +522,7 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	float:right;
 	width: 100%;
 }
 
@@ -755,7 +762,9 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-
+#page{
+	;
+}
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -878,8 +887,6 @@ object {
 .gallery-caption {
 	display: block;
 }
-
-
 footer{
 	max-width:100%;
 	margin: 0 auto;
@@ -891,14 +898,8 @@ footer{
 #site-navigation li{
 	padding: 25px;
 }
-#site-navigation li a{
-	color:white;
-}
 #site-navigation li a:hover{
 	color:#c42801;
-}
-#site-navigation li a:visited{
-	color:white;
 }
 #site-navigation li a:active{
 	color:#c42801;
@@ -911,6 +912,10 @@ footer{
 	font-size: 55px;
 	width: 60%;
 	margin-left:25px;
+	margin-top:50px;
+}
+.site-branding a{
+	text-decoration:none;
 }
 p{
 	color:white;
@@ -918,13 +923,44 @@ p{
 .entry-header h1{
 	font-family: 'Berkshire Swash', cursive;
 	color: #c42801;
+	display:none;
 }
 .entry-content p{
 	line-height: 1.5em;
-}
-#primary{
-	margin-left:50px;
+	font-size:1.2em;
 }
 #primary img{
-	margin-left:75px;
+	opacity: 0.8;
+}
+
+@media screen and (max-width:750px){
+	#primary, #secondary, #widgets{
+		float: none;
+		margin: auto;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.site-branding a{
+		line-height:50px;
+		max-width:100%;
+	}
+	.menu-toggle{
+		height: auto;
+	}
+	#primary{
+		max-width:100%;
+		margin-right:25px;
+	}
+	#masthead{
+		
+	}
+}
+.menu-item a{
+	color:white;
+}
+
+.current-menu-item a, .current-menu-item a:visited{
+	color:red;
 }
