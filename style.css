@@ -898,3 +898,6 @@ footer{
 .comments-area{
 	display: none;
 }
+#site-navigation li{
+	padding: 25px;
+}
