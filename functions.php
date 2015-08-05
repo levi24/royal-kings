@@ -150,25 +150,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-function widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'rai19theme' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'client', 'rai19theme' ),
-		'id'            => 'sidebar-2',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	
-	}
+/* Enqueue google fonts in functions.php to ensure that the fonts get loaded everytime this file loads */
+function google_font(){							
+wp_register_style('google_font','http://fonts.googleapis.com/css?family=Berkshire+Swash:400|Oswald:400, 400, 400');
+wp_enqueue_style('google_font');
+}
+add_action('wp_enqueue_scripts', 'google_font');
