@@ -953,7 +953,13 @@ p{
 	}
 	#masthead{
 		background-image: url(“http://phoenix.sheridanc.on.ca/public_html/wp-content/themes/royal-kings/black.jpg”);
-		height:14em;
+		height:18em;
+	}
+	footer{
+		line-height: 25px;
+	}
+	.entry-content h3{
+		line-height:25px;
 	}
 }
 .menu-item a{
