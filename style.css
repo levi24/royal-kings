@@ -350,12 +350,9 @@ background: black;
 }
 #masthead{
 	background-image:url("http://phoenix.sheridanc.on.ca/~ccit2705/wp-content/themes/royal-kings/sheesha.jpg");
-	height: 400px;
+	height: 150px;
 	background-repeat:no-repeat;
 	background-position:right;
-}
-#masthead img{
-	
 }
 
 blockquote:before,
@@ -905,7 +902,8 @@ footer{
 	color:#c42801;
 }
 #site-navigation{
-	width:40%;
+	width:45%;
+	margin-right: 20px;
 }
 .site-branding{
 	font-family: 'Berkshire Swash', cursive;
@@ -954,7 +952,8 @@ p{
 		margin-right:25px;
 	}
 	#masthead{
-		
+		background-image: url(“http://phoenix.sheridanc.on.ca/public_html/wp-content/themes/royal-kings/black.jpg”);
+		height:14em;
 	}
 }
 .menu-item a{
@@ -963,4 +962,8 @@ p{
 
 .current-menu-item a, .current-menu-item a:visited{
 	color:red;
+	font-weight:bold;
+}
+.about{
+	padding:0px 50px 0px 50px;
 }
