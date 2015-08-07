@@ -156,3 +156,6 @@ wp_register_style('google_font','http://fonts.googleapis.com/css?family=Berkshir
 wp_enqueue_style('google_font');
 }
 add_action('wp_enqueue_scripts', 'google_font');
+
+// Call the file that controls the theme options
+require get_template_directory() .'/inc/options.php';
