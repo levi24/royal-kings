@@ -927,7 +927,7 @@ p{
 	line-height: 1.5em;
 	font-size:1.2em;
 }
-@media screen and (max-width: 1110px){
+@media screen and (max-width: 1110px){ /* Styling for every screen */
 	.site-branding a{
 		line-height:60px;
 		max-width:100%;
@@ -936,7 +936,7 @@ p{
 		line-height:25px;
 	}
 }
-@media screen and (max-width: 830px){
+@media screen and (max-width: 830px){ /*Styling for bigger screens */
 	#masthead{
 		background-image: url(“http://phoenix.sheridanc.on.ca/public_html/wp-content/themes/royal-kings/black.jpg”);
 		height:10em;
@@ -945,7 +945,7 @@ p{
 		line-height:25px;
 	}
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px){ /* Styling for bigger screens like tablets */
 	#masthead{
 		background-image: url(“http://phoenix.sheridanc.on.ca/public_html/wp-content/themes/royal-kings/black.jpg”);
 		height:18em;
@@ -958,7 +958,7 @@ p{
 		line-height:25px;
 	}
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px){ /* Styling for mobile phones */
 	.site-branding a{
 		line-height:60px;
 		max-width:100%;
