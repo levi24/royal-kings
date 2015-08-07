@@ -989,7 +989,7 @@ p{
 .about{
 	padding:0px 50px 0px 50px;
 }
-@keyframes slidy {
+@keyframes slidy { /* Adds a slider wherever the HTML code for the slider is inserted. Moves the images to the left, one after another, in the time-frame listed below */
 	0% { 
 		left: 0%; 
 	   }
@@ -1031,12 +1031,12 @@ body {
 }
 #slider figure { 
   position: relative;
-  width: 500%;
+  width: 500%;/* Covers the image across the page. Decreasing the length will not cover the entire width of the image and vice versa. Needs to be 500%. */
   margin: 0;
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 20s slidy infinite; 
+  animation: 20s slidy infinite; /* Css for the slider, making the image slide faster than normal */
 }
 iframe{
 	float:left;
