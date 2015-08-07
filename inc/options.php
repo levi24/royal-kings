@@ -26,11 +26,10 @@ function rk_setting(){
 	function options_page_callback() { 
 		echo __( 'A description and detail about the section.','royal-kings' );
 		}
-	add_settings_field( 'rk_text', __('Enter your text', 'royal-kings'), 'rk_text_render', 'theme_options', 'options_page');
+	add_settings_field( 'rk_text', __('Enter the title for your options page: ', 'royal-kings'), 'rk_text_render', 'theme_options', 'options_page');
 	add_settings_field( 'rk_checkbox', __( 'Check your preference', 'royal-kings' ), 'rk_checkbox_render', 'theme_options', 'options_page');
-	add_settings_field( 'rk_radio', __( 'Choose an option', 'royal-kings' ), 'rk_radio_render', 'theme_options', 'options_page');
-	add_settings_field( 'rk_textarea', __( 'Enter content in the textarea', 'royal-kings' ), 'rk_textarea_render', 'theme_options', 'options_page');
-	add_settings_field( 'rk_select', __( 'Choose from the dropdown', 'royal-kings' ), 'rk_select_render', 'theme_options', 'options_page');
+	add_settings_field( 'rk_textarea', __( 'Enter sponsors that you might have:', 'royal-kings' ), 'rk_textarea_render', 'theme_options', 'options_page');
+	
 	function rk_text_render() {
 		$options=get_option( 'options_settings' );
 		?>
@@ -45,23 +44,11 @@ function rk_setting(){
 		<?php if (isset($options['rk_checkbox'])) checked( $options['rk_checkbox'], 1); ?>value="1">
 		<?php
 	}
-	function rk_radio_render() { 
-		$options=get_option( 'options_settings' );
-		?>
-		<input type="radio"name="options_settings[rk_radio]"<?php if (isset($options['rk_radio'])) checked( $options['rk_radio'], 1 ); ?>value="1">
-		<?php
-	}
 	function rk_textarea_render() { 
 		$options=get_option( 'options_settings' );
 		?>
 		<textarea cols="40"rows="5"name="options_settings[rk_textarea]">
 		<?php if (isset($options['rk_textarea'])) echo$options['rk_textarea']; ?></textarea>
-		<?php
-		}
-	function rk_select_render() { 
-		$options=get_option( 'options_settings' );
-		?>
-		<select name="options_settings[rk_select]"><option value="1" <?php if (isset($options['rk_select'])) selected( $options['rk_select'], 1 ); ?>>Option 1</option><option value="2" <?php if (isset($options['rk_select'])) selected( $options['rk_select'], 2 ); ?>>Option 2</option></select>
 		<?php
 		}
 }
