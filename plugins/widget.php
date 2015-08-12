@@ -7,7 +7,10 @@ Author: Rachit Srivastava
 Version: 2.0
 Author URI: http://www.sheridanc.on.ca
 */
-
+function royal_king_style() {
+	wp_enqueue_style( 'style-plugin', plugins_url('/royal_king.css'));
+}
+add_action( 'wp_enqueue_scripts', 'royal_king_style' );
 function my_post_type() {
 	register_post_type( 'royalking',
                 array( 
