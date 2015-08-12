@@ -43,8 +43,8 @@ function my_post_type() {
 					) 
 				);
 }
-add_action('init', 'my_post_type');
-add_theme_support( 'post-thumbnails' );
+add_action('init', 'my_post_type'); // Registers custom post_type on wordpress
+add_theme_support( 'post-thumbnails' ); // Enables thumbnails to be part of the custom post type
 
 class RoyalKing extends WP_Widget {
 	/**
@@ -54,7 +54,7 @@ class RoyalKing extends WP_Widget {
 		parent::__construct(
 			'RoyalKing', // Base ID
 			__( 'Royal King Plugin', 'text_domain' ), // Name
-			array( 'description' => __( 'The widget on the site', 'text_domain' ), ) // Args
+			array( 'description' => __( 'The widget on the site', 'text_domain' ), ) 
 		);
 	}
 
@@ -67,18 +67,20 @@ class RoyalKing extends WP_Widget {
 		/* if (count ($_POST) > 0) {		Commenting out the if statement because it does not work. This 
 			$option = $_POST['deals']; 		was initially used to make the user choose the posts he/she wants to see.
 			if($option== 't'){ */
-			$new = array('post_type'=> 'royalking', 'showposts' => 4);
+			$new = array('post_type'=> 'royalking', 'showposts' => 4); //Shows posts that belong to the custom post type
 			$my_query = new WP_query($new);
 		
 			if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
 		
 			<article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
 			<h2 class="post-title">
-				<?php the_title(); ?>
+				<?php the_title(); ?> <!-- Shows the title of the post above the featured image of the post -->
 			</h2>
 		<div class="entry-content">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-		<?php the_post_thumbnail('thumbnail'); ?> </a> 	
+				<!-- Displays the URL of the link that the post is connected to. Thus, when 
+				the user clicks the image, it directs him/her to the post. -->
+		<?php the_post_thumbnail('thumbnail'); ?> </a> 	<!-- Displays the featured image on the site -->
 		</div><!-- .entry-content -->
 		</article><!-- #post-## -->
 		<?php endwhile; endif;?>
@@ -96,7 +98,7 @@ class RoyalKing extends WP_Widget {
 		echo $args['after_widget'];
 	}
 
-} // class Foo_Widget
+} // Registers the widget on wordpress so the user can simply drag and drop into their sidebar.
 add_action( 'widgets_init', function(){
 	register_widget( 'RoyalKing' );
 });
