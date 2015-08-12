@@ -7,30 +7,39 @@ Author: Rachit Srivastava
 Version: 2.0
 Author URI: https://phoenix.sheridanc.on.ca/~ccit2705/
 */
+
+/* Enqueues the external stylesheet called "royal_king.css" in order to style the plugin. 
+This style affects the plugin directly and has a fixed styling according to the styles
+made on this external stylesheet. */
 function royal_king_style() {
 	wp_enqueue_style( 'style-plugin', plugins_url('/royal_king.css'));
 }
 add_action( 'wp_enqueue_scripts', 'royal_king_style' );
+
+/* Registers the custom post type on the wordpress dashboard. Here the user can create 
+custom posts according to their needs and have a separate section where all the posts
+can be listed other than the default "posts" section on wordpress.*/
 function my_post_type() {
 	register_post_type( 'royalking',
                 array( 
-				'label' => __('Todays Deals!'), 
+				'label' => __('Todays Deals!'), /* Custom post types name on the dashboard. */
 				'singular_label' => __('Slide', 'my_framework'),
 				'_builtin' => false,
 				'exclude_from_search' => true, // Exclude from Search Results
 				'capability_type' => 'page',
 				'public' => true, 
 				'show_ui' => true,
-				'taxonomies' => array('category'),
-				'show_in_nav_menus' => false,
+				'taxonomies' => array('category'),/* Creates categories in the custom post type so 
+								     user can assign category names to each post */
+				'show_in_nav_menus' => false, /* The custom post type does not appear in the nav menu */
 				'rewrite' => array(
 					'slug' => 'royal-king',
 				),
-				'supports' => array(
+				'supports' => array( // These are the different sections that the custom post type has.
 						'title',
 						'custom-fields',
 						'editor',
-            			'thumbnail')
+            					'thumbnail')
 					) 
 				);
 }
