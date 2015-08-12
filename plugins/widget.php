@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Royal King Plugin
-Plugin URI: http://www.sheridanc.on.ca
+Plugin URI: https://phoenix.sheridanc.on.ca/~ccit2705/
 Description: The widget shows the different posts for the different categories
 Author: Rachit Srivastava
 Version: 2.0
-Author URI: http://www.sheridanc.on.ca
+Author URI: https://phoenix.sheridanc.on.ca/~ccit2705/
 */
 function royal_king_style() {
 	wp_enqueue_style( 'style-plugin', plugins_url('/royal_king.css'));
